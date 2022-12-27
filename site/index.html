@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Learn JS!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loginContainer">
+        <div id="userNameLogin">
+          <label id="userName" for="userNameText">User Name:</label>
+          <input type="text" id="userNameText" name="userNameText" />
+          <p id="error"></p>
+        </div>
+        <div id="userPasswordLogin">
+          <label for="Password">Password:</label>
+          <input type="text" id="Password" password="Password" />
+        </div>
+        <div id="loginButton">
+          <button onClick="logName()" id="login">Login</button>
+          <button id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
