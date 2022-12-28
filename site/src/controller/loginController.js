@@ -14,7 +14,7 @@ loginButton.addEventListener("click", function logName(event) {
     ? (clearErrors(),
       clearTextFields(),
       (window.location.href = "./page2.html"))
-    : console.log("Error");
+    : null;
 });
 
 // checks the length of the parameter
