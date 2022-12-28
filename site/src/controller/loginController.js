@@ -1,20 +1,22 @@
-const unTextField = document.querySelector("#userNameText");
-const unPassField = document.querySelector("#Password");
-const errorMsg = document.querySelector("#error");
-const loginButton = document.querySelector("#login");
+const unTextField = document.getElementById("userNameText");
+const unPassField = document.getElementById("Password");
+const errorMsg = document.getElementById("error");
+const loginButton = document.getElementById("login");
 const testUser = "test";
 const testPass = "test";
-// console.log(nameText);
-// Console logs the name inside the textfield
-function logName() {
-  // Get value from the text box
-  let nameText = document.querySelector("#userNameText").value;
-  let pass = document.querySelector("#Password").value;
+
+loginButton.addEventListener("click", function logName(event) {
+  let nameText = unTextField.value;
+  let pass = unPassField.value;
+
   // check for errors, uses a ternary operator
   errorCheck(nameText, pass)
-    ? (clearErrors(), clearTextFields(), (window.location = "./page2.html"))
+    ? (clearErrors(),
+      clearTextFields(),
+      (window.location.href = "./page2.html"))
     : console.log("Error");
-}
+});
+
 // checks the length of the parameter
 function errorCheck(name, pass) {
   if (name.length == 0) {
